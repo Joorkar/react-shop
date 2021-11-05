@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CreateAccount.scss';
+import '@styles/CreateAccount.scss';
 
 const CreateAccount = () => {
   return (
@@ -15,7 +15,7 @@ const CreateAccount = () => {
             <label for="password" className="label">Password</label>
             <input type="password" id="password" placeholder="*********" className="input input-password" />
           </div>
-          <input type="submit" value="Create" className="primary-button login-button" />
+          <input type="submit" value="Create account" className="primary-button login-button" />
         </form>
       </div>
     </div>

@@ -22,6 +22,9 @@
 	width: 35px;
 	height: 35px;
 }
+.product-info figure img:hover {
+	cursor: pointer;
+}
 .product-info div p:nth-child(1) {
 	font-weight: bold;
 	font-size: var(--md);
