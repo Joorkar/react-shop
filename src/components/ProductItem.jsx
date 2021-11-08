@@ -17,7 +17,7 @@ const ProductItem = ({ product }) => {
       <img src={product.images[0]} alt={product.title} />
       <div className="product-info">
         <div>
-          <p>${product.price}.00</p>
+          <p>${product.price}</p>
           <p>{product.title}</p>
         </div>
         <figure onClick={() => handleClick(product)} >

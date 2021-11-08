@@ -1,7 +1,7 @@
 {
   "name": "react-shop",
   "version": "1.0.0",
-  "description": "React eshop",
+  "description": "React shop",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,10 @@
   },
   "keywords": [
     "react",
-    "javascript"
+    "javascript",
+    "webpack",
+    "sass",
+    "react-hook"
   ],
   "author": "Joorkar Romero <joorkarobrajham@gmail.com>",
   "license": "MIT",
