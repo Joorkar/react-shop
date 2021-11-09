@@ -14,6 +14,7 @@ import NotFound from '@pages/NotFound';
 import AppContext from '@context/AppContext';
 import useInitialState from '@hooks/useInitialState';
 import '@styles/global.css';
+import OrderItem from '../components/OrderItem';
 
 const App = () => {
   const initialState = useInitialState();

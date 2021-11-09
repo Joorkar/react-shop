@@ -7,8 +7,8 @@ import close from '@icons/icon_close.png';
 const OrderItem = ({ product }) => {
   const { removeFromCart } = useContext(AppContext);
 
-  const handleRemove = product => {
-    removeFromCart(product);
+  const handleRemove = item => {
+    removeFromCart(item);
   };
 
   return (

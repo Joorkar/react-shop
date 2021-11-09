@@ -2,14 +2,12 @@ import React, { useContext } from 'react';
 import '@styles/ProductItem.scss';
 import AppContext from '@context/AppContext';
 import addCart from '@icons/bt_add_to_cart.svg';
-import addedCart from '@icons/bt_added_to_cart.svg';
 
 const ProductItem = ({ product }) => {
   const { addToCart } = useContext(AppContext);
 
   const handleClick = item => {
     addToCart(item);
-    console.log(item);
   };
 
   return (
