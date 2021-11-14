@@ -2,15 +2,32 @@
 
 .MyOrder {
 	width: 360px;
+	height: 100vh;
 	padding: 24px;
 	box-sizing: border-box;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 60px;
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 	background-color: white;
+	overflow: auto;
+}
+.MyOrder::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+.MyOrder::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+.MyOrder::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.MyOrder::-webkit-scrollbar-thumb:active {
+	background-color: #999999;
 }
 .title-container {
 	display: flex;
