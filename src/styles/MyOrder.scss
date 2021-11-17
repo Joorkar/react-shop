@@ -1,8 +1,11 @@
 @use 'vars';
 
 .MyOrder {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	width: 360px;
-	height: 100vh;
+	height: 100%;
 	padding: 24px;
 	box-sizing: border-box;
 	position: fixed;
@@ -12,22 +15,6 @@
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 	background-color: white;
-	overflow: auto;
-}
-.MyOrder::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-.MyOrder::-webkit-scrollbar-thumb {
-	background: #ccc;
-	border-radius: 4px;
-}
-.MyOrder::-webkit-scrollbar-thumb:hover {
-	background: #b3b3b3;
-	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-}
-.MyOrder::-webkit-scrollbar-thumb:active {
-	background-color: #999999;
 }
 .title-container {
 	display: flex;
@@ -39,6 +26,27 @@
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
+	margin-bottom: 20px;
+}
+.card-container {
+	width: auto;
+	height: 380px;
+	overflow: auto;
+}
+.card-container::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+.card-container::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+.card-container::-webkit-scrollbar-thumb:hover {
+	background: #b3b3b3;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.card-container::-webkit-scrollbar-thumb:active {
+	background-color: #999999;
 }
 .order {
 	display: grid;
@@ -46,7 +54,7 @@
 	gap: 16px;
 	align-items: center;
 	background-color: var(--text-input-field);
-	margin-bottom: 24px;
+
 	border-radius: 8px;
 	padding: 0 24px;
 }
