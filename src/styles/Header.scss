@@ -3,7 +3,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 6px;
   border-bottom: 1px solid var(--very-light-pink);
   position: fixed;
   background-color: var(--white);
@@ -71,6 +71,9 @@ nav {
   align-items: center;
 }
 @media (max-width: 640px) {
+  nav {
+    padding: 0 24px;
+  }
   .menu {
     display: block;
   }
