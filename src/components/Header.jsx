@@ -9,11 +9,12 @@ import shoppingCart from '@icons/icon_shopping_cart.svg'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const [toggleOrders, setToggleOrdes] = useState(false)
+  const [toggleOrders, setToggleOrders] = useState(false)
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
-    setToggle(!toggle);
+    setToggle((prev) => !prev);
+    // setToggle(!toggle); Con esta manera no me asugura tomar el estado actual si no el anterior
   }
 
   const verifyCart = (cartNumber) => {
@@ -63,7 +64,7 @@ const Header = () => {
           </li>
           <li
             className="navbar-shopping-cart"
-            onClick={() => setToggleOrdes(!toggleOrders)}
+            onClick={() => setToggleOrders(!toggleOrders)}
           >
             <img src={shoppingCart} alt="shopping cart" />
             {verifyCart(state.cart.length)}
@@ -71,7 +72,7 @@ const Header = () => {
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder />}
+      {toggleOrders && <MyOrder setToggle={setToggleOrders} />}
     </nav>
   );
 };
