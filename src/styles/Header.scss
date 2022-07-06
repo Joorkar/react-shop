@@ -70,7 +70,10 @@ nav {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 640px) {
+@media (max-width: 620px) {
+  nav {
+    width: 92%;
+  }
   .menu {
     display: block;
   }
