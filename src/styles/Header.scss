@@ -72,10 +72,12 @@ nav {
 }
 @media (max-width: 620px) {
   nav {
-    width: 92%;
+    width: 100%;
+      flex-wrap: wrap;
   }
   .menu {
     display: block;
+    position: relative;
   }
   .navbar-left ul {
     display: none;

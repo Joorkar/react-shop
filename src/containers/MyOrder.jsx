@@ -4,7 +4,7 @@ import AppContext from '@context/AppContext'
 import '@styles/MyOrder.scss';
 import flechita from '@icons/flechita.svg';
 
-const MyOrder = ({ setToggle }) => {
+const MyOrder = ({ toggleOrders }) => {
   const { state } = useContext(AppContext)
 
   const sumTotal = () => {
@@ -13,7 +13,7 @@ const MyOrder = ({ setToggle }) => {
     return sum;
   }
 
-  const handleClose = () => setToggle(false);
+  const handleClose = () => toggleOrders(false);
 
   return (
     <aside className="MyOrder">

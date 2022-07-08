@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import '@styles/Header.scss'
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder'
+import MenuMobile from '@components/MenuMobile';
 import menuImg from '@icons/icon_menu.svg'
 import logo from '@logos/logo_yard_sale.svg'
 import AppContext from '@context/AppContext';
@@ -10,11 +11,16 @@ import shoppingCart from '@icons/icon_shopping_cart.svg'
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false)
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
     setToggle((prev) => !prev);
     // setToggle(!toggle); Con esta manera no me asugura tomar el estado actual si no el anterior
+  }
+
+  const handleMenuToggle = () => {
+    setToggleMenu((prev) => !prev);
   }
 
   const verifyCart = (cartNumber) => {
@@ -33,7 +39,7 @@ const Header = () => {
 
   return (
     <nav>
-      <img src={menuImg} alt="menu" className="menu" />
+      <img src={menuImg} alt="menu" className="menu" onClick={handleMenuToggle} />
       <div className="navbar-left">
         <img src={logo} alt="logo" className="nav-logo" />
         <ul>
@@ -71,8 +77,9 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      {toggleMenu && <MenuMobile toggleMenu={setToggleMenu} />}
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder setToggle={setToggleOrders} />}
+      {toggleOrders && <MyOrder toggleOrders={setToggleOrders} />}
     </nav>
   );
 };
