@@ -42,6 +42,9 @@
   margin-bottom: 20px;
 }
 
+.mobile-menu ul li a {
+  cursor: pointer;
+}
 .mobile-menu .email {
   font-size: var(--sm);
   font-weight: 300;

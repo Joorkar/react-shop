@@ -16,7 +16,7 @@ const Header = () => {
 
   const handleToggle = () => {
     setToggle((prev) => !prev);
-    // setToggle(!toggle); Con esta manera no me asugura tomar el estado actual si no el anterior
+    // setToggle(!toggle); Con esta manera no me asugura tomar el estado actual
   }
 
   const handleMenuToggle = () => {
