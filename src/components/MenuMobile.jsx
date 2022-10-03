@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '@styles/MenuMobile.scss'
 import iconClose from '@icons/icon_close.png'
 
